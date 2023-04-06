@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sing In & Sing Up Form using HTML, CSS & JS">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <title>Sign In / Sign Up Page</title>
+</head>
+<body>
+  <main>
+    <div class="login-wrapper" id="container">
+      <div class="form-box login">
+        <div class="login-header">
+          <span><i class="fa-solid fa-sailboat"></i></span>
+          <h1>Hello Again!</h1>
+          <p>
+            Lorem ipsum dolor, sit amet . Exercitationem <br>
+            quis eum insit! Nemo, fugiat.
+          </p>
+        </div>
+        <form id="loginForm">
+          <div class="field-loginEmail">
+            <div class="input-wrap">
+              <input id="loginEmail" class="input-field" name="login-email" type="email" maxlength="35" autocomplete="off">
+              <label>Email</label>
+              <span class="icon"><i class="fa-solid fa-at"></i></span>
+            </div>
+            <span class="error loginEmailError">
+              <img src="img/exclamation-circle-svgrepo-com.svg" alt="exclamation mark">
+              <p class="error-text">
+                Please fill out this field. 
+              </p>
+            </span>
+          </div>
+          <div class="field-loginPassword">
+            <div class="input-wrap">
+              <input class="input-field" name="login-password" id="loginPassword" type="password" minlength="4">
+              <label>Password</label>
+              <span class="icon"><i id="lock-icon2" onclick="myFunction2()" class="fa-solid fa-lock"></i></span>
+              <span class="icon"><i id="unlock-icon2" onclick="myFunction2()" class="fa-solid fa-unlock"></i></span>
+            </div>
+            <span class="error loginPasswordError">
+              <img src="img/exclamation-circle-svgrepo-com.svg" alt="exclamation mark">
+              <p class="error-text">
+                Please fill out this field. 
+              </p>
+            </span>
+          </div>
+          <div class="remenber-forget">
+            <div>
+              <input type="checkbox" id="remenber-password">
+              <label for="remenber-password">Remenber Me</label>
+            </div>
+            <div>
+              <a href="#">Recovery password</a>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="login-button">
+              <button class="button" type="submit">Sign In</button>
+            </div>
+            <div class="line"></div>
+            <div class="google-button">
+              <button class="button" type="submit"> <img src="img/icons8-google-logo.svg" alt="google icon"> Sign In With
+                Google</button>
+            </div>
+          </div>
+          <div class="signLink">
+            <p>Don't have an account yet? <a href="#" id="signUpLink">Sign Up</a> </p>
+          </div>
+        </form>
+        <div class="login-footer">
+          <p>@2023 Loremapp All Rights Reserved.</p>
+        </div>
+      </div>
+      <div class="form-box register">
+        <div class="login-header">
+          <span><i class="fa-solid fa-sailboat"></i></span>
+          <h1>Welcome!</h1>
+          <p>
+            Lorem ipsum dolor, sit amet . Exercitationem <br>
+            quis eum insit! Nemo, fugiat.
+          </p>
+        </div>
+        <form id="registerForm">
+          <div class="field-name">
+            <div class="input-wrap">
+              <input class="input-field" id="name" name="register-name"  type="text"  maxlength="35" autocomplete="off">
+              <label>Name</label>
+              <span class="icon"><i class="fa-solid fa-user"></i></span>
+            </div>
+            <span class="error nameError">
+            <img src="img/exclamation-circle-svgrepo-com.svg" alt="exclamation mark">
+              <p class="error-text">
+                  Please enter a valid name.
+              </p>
+            </span>
+          </div>
+          <div class="field-email">
+            <div class="input-wrap">
+              <input class="input-field" id="email" name="register-email"  type="email" maxlength="35" autocomplete="off">
+              <label>Email</label>
+              <span class="icon"><i class="fa-solid fa-at"></i></span>
+            </div>
+            <span class="error emailError">
+              <img src="img/exclamation-circle-svgrepo-com.svg" alt="exclamation mark">
+              <p class="error-text">
+                Please enter a valid email.
+              </p>
+            </span>
+          </div>
+          <div class="field-registerPassword">
+            <div class="input-wrap">
+              <input class="input-field" name="register-password"  id="registerPassword" type="password"  minlength="4">
+              <label>Password</label>
+              <span class="icon"><i id="lock-icon" onclick="myFunction()" class="fa-solid fa-lock"></i></span>
+              <span class="icon"><i id="unlock-icon" onclick="myFunction()" class="fa-solid fa-unlock"></i></span>
+            </div>
+            <span class="error passwordError">
+              <img src="img/exclamation-circle-svgrepo-com.svg" alt="exclamation mark">
+              <p class="error-text">
+                Please enter at least 8 characters with a number, a symbol, a small and capital letter. 
+              </p>
+            </span>
+          </div>
+          <div class="field-confirmPassword">
+            <div class="input-wrap">
+              <input class="input-field" name="password-confirmation" id="confirmRegisterPassword" type="password"  minlength="4">
+              <label>Confirm Password</label>
+              <span class="icon"><i id="lock-icon1" onclick="myFunction1()" class="fa-solid fa-lock"></i></span>
+              <span class="icon"><i id="unlock-icon1" onclick="myFunction1()" class="fa-solid fa-unlock"></i></span>
+            </div>
+            <span class="error confirmPswError">
+              <img src="img/exclamation-circle-svgrepo-com.svg" alt="exclamation mark">
+              <p class="error-text">
+                Passwords don't match
+              </p>
+            </span>
+          </div>
+          <div class="terms">
+            <div>
+              <input type="checkbox" id="terms">
+              <label for="terms">Check here to indicate that you have read and agree to the <span><a href="#">Terms of Services</a> and <a href="#">Privacy Policy.</a></span></label>
+            </div>
+          </div>
+            <div class="login-button">
+              <button class="button" type="submit">Sign Up</button>
+            </div>
+          <div class="signLink">
+            <p> Already have an account? <a href="#" id="signInLink">Sign In</a></p>
+          </div>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-right">
+            <div class="overlay-content">
+              <h1>Welcome, Friend</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci, commodi molestias cumque nulla deleniti magnam alias quidem minus ime enim! Quod beatae nostrum voluptate.</p>
+              <button class="overlay-button" id="signUp" type="submit">Sign Up</button>
+            </div>
+            <img class="svg" src="img/Mobile feed-pana.svg" alt="Woman using her cellphone">
+          </div>
+          <div class="overlay-panel overlay-left">
+            <div class="overlay-content">
+              <h1>Hello, Friend</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci, commodi molestias cumque nulla deleniti magnam alias quidem minus ime enim! Quod beatae nostrum voluptate.</p>
+              <button class="overlay-button" id="signIn" type="submit">Sign In</button>
+            </div>
+            <img class="svg" src="/img/Mobile login-bro.svg" alt="Man using his cellphone">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
